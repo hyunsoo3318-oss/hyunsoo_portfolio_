@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hyunsoo Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #606c88 0%, #3f4c6b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #606c88 0%, #3f4c6b 100%);
+            border-radius: 2px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #606c88 0%, #3f4c6b 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .link-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .link-card:hover {
+            box-shadow: 0 20px 60px rgba(96, 108, 136, 0.15);
+        }
+
+        .link-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .link-card p {
+            color: #5a6c7d;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #606c88 0%, #3f4c6b 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(96, 108, 136, 0.3);
+        }
+
+        .link-button:hover {
+            box-shadow: 0 6px 25px rgba(96, 108, 136, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="hero container" id="about">
+            <h1>hyunsoo Portfolio</h1>
+        </section>
+
+        <section class="section container" id="links">
+            <h2 class="section-title">My Work</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <h3>About Me</h3>
+                    <a href="https://portfolio-theta-two-11.vercel.app" target="_blank" class="link-button">Visit</a>
+                </div>
+
+                <div class="link-card">
+                    <h3>Tech Blog</h3>
+                    <p>Blog on AI Agent development Technology</p>
+                    <a href="https://note24432.tistory.com/?page=1" target="_blank" class="link-button">Visit</a>
+                </div>
+
+                <div class="link-card">
+                    <h3>Startup - Nudge AI landing page</h3>
+                    <p>Successfully collected user responses and compiled a pre-registration customer list via the landing page</p>
+                    <a href="https://nudge-ai-landingpage-ovt6.vercel.app" target="_blank" class="link-button">Visit</a>
+                </div>
+
+                <div class="link-card">
+                    <h3>Nudge AI Demo</h3>
+                    <p>AI-powered phone call based secure payment system & habit management/education solution for children's financial literacy</p>
+                    <a href="https://childinterface-gb92.vercel.app" target="_blank" class="link-button">Visit</a>
+                </div>
+
+                <div class="link-card">
+                    <h3>Nudge AI IR Deck</h3>
+                    <p>Created a comprehensive IR pitch deck covering problem definition, solution, technology, and market analysis, and leveraged it to actively pitch to investors.</p>
+                    <a href="넛지_IR.pdf" download="넛지_IR.pdf" class="link-button">Download</a>
+                </div>
+
+                <div class="link-card">
+                    <h3>SNUVC(Venture Consulting, CES2026)</h3>
+                    <p>Providing consulting services to early-stage student founders by leveraging insights gained from interviews with various VCs at SNUVC.</p>
+                    <a href="https://snuvc-venture-consulting.vercel.app/" target="_blank" class="link-button">Visit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
