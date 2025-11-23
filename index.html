@@ -191,7 +191,7 @@
                 <div class="link-card">
                     <h3>Nudge AI IR Deck</h3>
                     <p>Created a comprehensive IR pitch deck covering problem definition, solution, technology, and market analysis, and leveraged it to actively pitch to investors.</p>
-                    <a href="넛지_IR.pdf" onclick="downloadPDF(event)" class="link-button">Download</a>
+                    <a href="Nudge_IR.pdf" download="Nudge_IR.pdf" class="link-button">Download</a>
                 </div>
 
                 <div class="link-card">
@@ -202,16 +202,5 @@
             </div>
         </section>
     </main>
-    <script>
-        function downloadPDF(event) {
-            event.preventDefault();
-            const link = document.createElement('a');
-            link.href = '넛지_IR.pdf';
-            link.download = 'Nudge_IR.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
 </body>
 </html>
